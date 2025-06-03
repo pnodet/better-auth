@@ -163,7 +163,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useState } from "react";
-import { Loader2, Key } from "lucide-react";
+import { Loader2Icon${options.passkey ? ", KeyIcon" : ""} } from "lucide-react";
 import { signIn } from "@/lib/auth-client";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -278,7 +278,7 @@ export default function SignIn() {
                   );
                  }}>
                   {loading ? (
-                     <Loader2 size={16} className="animate-spin" />
+                     <Loader2Icon size={16} className="animate-spin" />
                      ):(
                          Sign-in with Magic Link
                    )}
@@ -311,7 +311,7 @@ export default function SignIn() {
               }}
             >
               {loading ? (
-                <Loader2 size={16} className="animate-spin" />
+                <Loader2Icon size={16} className="animate-spin" />
               ) : (
                 <p> Login </p>
               )}
@@ -338,7 +338,7 @@ export default function SignIn() {
                 )
               }}
             >
-              <Key size={16} />
+              <KeyIcon size={16} />
               Sign-in with Passkey
             </Button>`
 							: ""
